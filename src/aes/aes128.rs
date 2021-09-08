@@ -1,25 +1,25 @@
-mod aes;
+use super::aes_cipher;
 
 type Aes128Key = [[u8; 16]; 10];
 
 pub struct Aes128{
-    keys : Aes128Key;
+    keys : Aes128Key
 }
 
 impl Aes128{
-    pub fn new(initial_key : &Block) -> Self{
+    pub fn new(initial_key : &aes_cipher::DataBlock) -> Self{
         let mut result = Aes128{
-            keys: [[0; 16]; 10];
-        }
+            keys: [[0; 16]; 10]
+        };
 
         result
     }
 
-    fn expand_key(&mut Aes128Key){
+    fn expand_key(&mut key_array: Aes128Key){
 
     }
 }
 
-impl AesCipher for Aes128{
+impl aes_cipher::AesCipher for Aes128{
     
 }
