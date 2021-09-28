@@ -1,4 +1,4 @@
-use super::aes_cipher;
+use super::common;
 
 type Aes256Key = [[u8; 16]; 14];
 
@@ -7,7 +7,7 @@ pub struct Aes256{
 }
 
 impl Aes256{
-    pub fn new(initial_key : &aes_cipher::DataBlock){
+    pub fn new(initial_key : &common::DataBlock){
 
     }
 
@@ -16,6 +16,12 @@ impl Aes256{
     }
 }
 
-impl aes_cipher::AesCipher for Aes256{
-    
+impl common::AesCipher for Aes256{
+    fn encrypt(&self, block: &mut common::DataBlock) {
+       
+    }
+
+    fn decrypt(&self, block: &mut common::DataBlock) {
+
+    }
 }

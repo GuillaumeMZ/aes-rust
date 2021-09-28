@@ -1,4 +1,4 @@
-use super::aes_cipher;
+use super::common;
 
 type Aes192Key = [[u8; 16]; 12]; 
 
@@ -7,7 +7,7 @@ pub struct Aes192{
 }
 
 impl Aes192{
-    pub fn new(initial_key : &aes_cipher::DataBlock){
+    pub fn new(initial_key : &common::DataBlock){
 
     }
 
@@ -16,6 +16,12 @@ impl Aes192{
     }
 }
 
-impl aes_cipher::AesCipher for Aes192{
-    
+impl common::AesCipher for Aes192{
+    fn encrypt(&self, block: &mut common::DataBlock) {
+
+    }
+
+    fn decrypt(&self, block: &mut common::DataBlock) {
+
+    }
 }
